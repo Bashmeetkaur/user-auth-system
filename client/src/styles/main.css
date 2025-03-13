@@ -1,0 +1,14 @@
+/* client/src/styles/main.css */
+
+/* Set background image on body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/bg.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep it fixed while scrolling */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure it covers full height */
+  }
