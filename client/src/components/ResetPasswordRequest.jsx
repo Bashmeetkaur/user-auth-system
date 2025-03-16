@@ -1,7 +1,7 @@
 // client/src/components/ResetPasswordRequest.jsx
 import React, { useState } from 'react';
 import authService from '../services/authService';
-import '../styles/resetpass.css';
+import '../styles/resetpassreq.css';
 
 const ResetPasswordRequest = () => {
   const [email, setEmail] = useState('');
