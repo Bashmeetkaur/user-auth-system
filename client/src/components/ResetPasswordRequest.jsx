@@ -1,6 +1,7 @@
 // client/src/components/ResetPasswordRequest.jsx
 import React, { useState } from 'react';
 import authService from '../services/authService';
+import '../styles/resetpass.css';
 
 const ResetPasswordRequest = () => {
   const [email, setEmail] = useState('');
@@ -24,30 +25,28 @@ const ResetPasswordRequest = () => {
 };
 
   return (
-    <div className="container mt-5">
-      <div className="custom-container">
-        <h2>Reset Password</h2>
-        {message && <div className="alert alert-info">{message}</div>}
+      <div className="container-resetpassreq">
+        <h2 className='head'>Reset Password</h2>
+        {message && <div className="alert-sent">{message}</div>}
         {errors.length > 0 && (
           <ul className="error-message">
             {errors.map((err, idx) => <li key={idx}>{err.msg}</li>)}
           </ul>
         )}
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
+          <div className="feilds">
             <label>Email</label>
             <input
               type="email"
-              className="form-input"
+              className="form-control"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <button type="submit" className="form-button">Send Reset Link</button>
+          <button type="submit" className="btn-primary">Send Reset Link</button>
         </form>
       </div>
-    </div>
   );
 };
 

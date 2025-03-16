@@ -1,12 +1,77 @@
-.home-heading {
-  font-size: 2.5rem;
-  color:whitesmoke;
-  font-style: italic;
-  font-weight: bolder;
+/* Home.css */
 
+.container-home {
+  /* Centering the container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Size and spacing */
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 60%;
+  min-height: 20%; /* Ensures a minimum height, adjust as needed */
+  
+  /* Blur effect with semi-transparent background */
+  background: rgba(255, 255, 255, 0.1); /* White with low opacity */
+  backdrop-filter: blur(2px); /* Blur effect */
+  border-radius: 15px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  
+  /* Visual enhancements */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  /* Ensure it doesn't touch edges */
+  margin: 2rem auto; /* Adds vertical margin to create space from top and bottom */
 }
 
+/* Heading styles */
+.home-heading {
+  color: #ffffff; /* White text for contrast */
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Subheading styles */
 .home-subheading {
+  color: #ffffff; /* White text */
   font-size: 1.5rem;
-  color:whitesmoke;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styles */
+.home-subheading a {
+  color: #4dabf7; /* Light blue for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Link hover effect */
+.home-subheading a:hover {
+  color: #74c0fc; /* Lighter blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 2rem;
+    width: 85%;
+    min-height: 150px; /* Adjusted for smaller screens */
+    margin: 1.5rem auto; /* Reduced margin for smaller screens */
+  }
+  
+  .home-heading {
+    font-size: 1.5rem;
+  }
+  
+  .home-subheading {
+    font-size: 1rem;
+  }
 }

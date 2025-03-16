@@ -1,31 +1,204 @@
+/* login.css + register.css */
 
-.head{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: whitesmoke;
-
+/* Container styles (similar to Home page) */
+.container-login{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 2rem 3rem;
+    width: 90%;
+    max-width: 700px;
+    min-height: 300px; /* Adjusted for form content */
+    
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(2px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    margin: 2rem auto; /* Space from top and bottom */
 }
-.mb-4{
-    color: whitesmoke;
-    font-style: italic;
-}
-.form-control{
-    background-color: #333;
-    color: whitesmoke;
-    border: 1px solid #333;
-}
-.btn-primary{
-    background-color: #007bff;
-    border-color: #007bff;
+
+.container-register{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   
+   padding: 2rem 3rem;
+   width: 90%;
+   max-width: 700px;
+   min-height: 300px; /* Adjusted for form content */
+   
+   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+   backdrop-filter: blur(2px); /* Blur effect */
+   border-radius: 15px; /* Rounded corners */
+   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+   
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+   
+   margin: 2rem auto; /* Space from top and bottom */
 }
 
-.alert alert-danger{
-    color: black;
-    background-color: tomato;
-} 
-/* check alert */
+/* Heading styles */
+.head {
+  color: #ffffff; /* White text for contrast */
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between form elements */
+}
 
-/* register will also use the same style  */
+/* Error message styles */
+.alert-danger {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 0, 0, 0.2); /* Semi-transparent red background */
+  color: #ff3333; /* Bright red text */
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Error list styles */
+.error-message {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff3333;
+  padding: 0.75rem;
+  border-radius: 8px;
+  list-style: none;
+  text-align: center;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.error-message li {
+  margin-bottom: 0.5rem;
+}
+
+/* Field container */
+.feilds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Label styles */
+.feilds label {
+  color: #ffffff; /* White text */
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input styles */
+.feilds .form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05); /* Slightly lighter background */
+  color: #ffffff; /* White text */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input focus state */
+.feilds .form-control:focus {
+  color: #ffffff; /* White text on focus */
+  border-color: #4dabf7; /* Light blue border on focus */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(77, 171, 247, 0.3); /* Glow effect */
+  text-align: center;
+}
+
+/* Button styles */
+.btn-primary {
+  padding: 0.75rem;
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: #4dabf7; /* Light blue background */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+  background: #74c0fc; /* Lighter blue on hover */
+  box-shadow: 0 4px 12px rgba(77, 171, 247, 0.4); /* Glow effect */
+}
+
+/* Register/Forgot Password paragraph */
+.register {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styles */
+.register a {
+  color: #4dabf7; /* Light blue for links */
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Link hover effect */
+.register a:hover {
+  color: #74c0fc; /* Lighter blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 2rem;
+    width: 85%;
+    min-height: 250px; /* Adjusted for smaller screens */
+    margin: 1.5rem auto;
+  }
+
+  .head {
+    font-size: 1.5rem;
+  }
+
+  .feilds .form-control {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .register {
+    font-size: 0.9rem;
+  }
+}

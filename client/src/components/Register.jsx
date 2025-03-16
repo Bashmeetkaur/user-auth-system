@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext.jsx';
 import authService from '../services/authService';
+import '../styles/login.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -28,7 +29,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-2">
+    <div className="container-register">
       <h2 className="head">Register</h2>
       {error && <div className="alert alert-danger">{error}</div>}
       {errors.length > 0 && (
@@ -37,7 +38,7 @@ const Register = () => {
           </ul>
         )}
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
+        <div className="feilds">
           <label>Username</label>
           <input
             type="text"
@@ -47,7 +48,7 @@ const Register = () => {
             required
           />
         </div>
-        <div className="mb-4">
+        <div className="feilds">
           <label>Email</label>
           <input
             type="email"
@@ -57,7 +58,7 @@ const Register = () => {
             required
           />
         </div>
-        <div className="mb-4">
+        <div className="feilds">
           <label>Password</label>
           <input
             type="password"
@@ -67,7 +68,7 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Register</button>
+        <button type="submit" className="btn-primary">Register</button>
       </form>
     </div>
   );

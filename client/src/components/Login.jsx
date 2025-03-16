@@ -27,16 +27,16 @@ const Login = () => {
   };
 };
   return (
-    <div className="container mt-2">
+    <div className="container-login">
       <h2 className="head">Login</h2>
-      {error && <div className="alert alert-danger">{error}</div>}
+      <form onSubmit={handleSubmit}>
+      {error && <div className="alert-danger">{error}</div>}
       {errors.length > 0 && (
           <ul className="error-message">
             {errors.map((err, idx) => <li key={idx}>{err.msg}</li>)}
           </ul>
         )}
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
+        <div className="feilds">
           <label>Email</label>
           <input
             type="email"
@@ -46,7 +46,7 @@ const Login = () => {
             required
           />
         </div>
-        <div className="mb-4">
+        <div className="feilds">
           <label>Password</label>
           <input
             type="password"
@@ -56,9 +56,10 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
+        <button type="submit" className="btn-primary">Login</button>
+        
       </form>
-      <p className="mt-3">
+      <p className="register">
         Don't have an account? <a href="/register">Register
         </a>
         Forgot password? <a href="/reset-password-request">Reset it</a>
